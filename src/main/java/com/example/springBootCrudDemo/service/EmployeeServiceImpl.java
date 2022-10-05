@@ -11,7 +11,13 @@ import com.example.springBootCrudDemo.dao.EmployeeDAO;
 import com.example.springBootCrudDemo.dao.EmployeeRepository;
 import com.example.springBootCrudDemo.entity.Employee;
 
-@Service
+/*
+ *  Since we're using Spring Data Rest in this version of the project, Spring boot will automatically provide us with a controller
+ *  and service and so we don't want this service to be used anymore. So we're removing the annotations to
+ *  hide it from component scanning process
+ * */
+
+//@Service
 public class EmployeeServiceImpl implements EmployeeService {
 	
 //	private EmployeeDAO employeeDAO;

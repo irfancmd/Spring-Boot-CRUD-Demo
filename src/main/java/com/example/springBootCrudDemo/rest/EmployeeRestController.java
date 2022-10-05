@@ -15,8 +15,21 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.springBootCrudDemo.entity.Employee;
 import com.example.springBootCrudDemo.service.EmployeeService;
 
-@RestController
-@RequestMapping("/api")
+/*
+ *  Since we're using Spring Data Rest in this version of the project, Spring boot will automatically provide us with a controller
+ *  and service and so we don't want this controller to be used anymore. So we're removing the annotations to
+ *  hide it from component scanning process
+ *  
+ *	Note: Spring Data JPA will search for JpaRepositories automatically and create REST controllers on its own. It will follow the
+ *	HATEOAS format while doing so.
+ *
+ *	The default endpoint is localhost:{portnumber}/employees, but we've used a custom endpoint in the properties file
+ *	
+ *	It will follow simple plural convention for naming the endpoints
+ * */
+
+//@RestController
+//@RequestMapping("/api")
 public class EmployeeRestController {
 	
 	private EmployeeService employeeService;
