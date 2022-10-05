@@ -12,6 +12,9 @@ import org.springframework.stereotype.Repository;
 
 import com.example.springBootCrudDemo.entity.Employee;
 
+/*
+ *	This is the Hibernate specific EmployeeDAO implementation. So it will only work with Hibernate. 
+ * */
 @Repository
 public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 	
